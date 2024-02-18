@@ -15,7 +15,6 @@ const config: Config = {
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
-        libreCaslonText: ["var(--font-libreCaslonText)"],
       },
     },
   },

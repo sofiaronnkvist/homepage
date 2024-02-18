@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Poppins, Libre_Caslon_Text } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
 
 const poppins = Poppins({
   style: "normal",
-  weight: "400",
+  weight: ["400", "600"],
   subsets: ["latin"],
   variable: "--font-poppins"
-});
-
-const libreCaslonText = Libre_Caslon_Text({
-  style: "italic",
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-libreCaslonText"
 });
 
 export const metadata: Metadata = {
@@ -29,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={`${poppins.variable} ${libreCaslonText.variable} font-sans`}>
+      <body className={`${poppins.variable} font-sans`}>
         <Navbar />
         {children}
         </body>

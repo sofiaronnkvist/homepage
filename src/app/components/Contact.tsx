@@ -6,8 +6,7 @@ export default function Contact() {
     return (
         <div className="flex min-h-screen min-w-screen">
             <div className="p-8 flex flex-row items-end">
-                <h1 className="text-4xl lg:text-8xl font-poppins">Cont</h1>
-                <h1 className="text-4xl lg:text-8xl font-libreCaslonText">act</h1>
+                <h1 className="text-4xl lg:text-8xl font-serif italic">Contact</h1>
             </div>
             <div className="flex justify-center flex-col">
                 <div className="flex flex-col">
