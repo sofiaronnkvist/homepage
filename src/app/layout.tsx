@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Poppins, Libre_Caslon_Text } from "next/font/google";
 import "./globals.css";
+import Navbar from "./navbar";
 
-const fraunces = Fraunces({
+const poppins = Poppins({
   style: "normal",
-  weight: "800",
-  subsets: ["latin"]
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-poppins"
+});
+
+const libreCaslonText = Libre_Caslon_Text({
+  style: "italic",
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-libreCaslonText"
 });
 
 export const metadata: Metadata = {
@@ -19,8 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={fraunces.className}>{children}</body>
+    <html className="scroll-smooth" lang="en">
+      <body className={`${poppins.variable} ${libreCaslonText.variable} font-sans`}>
+        <Navbar />
+        {children}
+        </body>
     </html>
   );
 }
