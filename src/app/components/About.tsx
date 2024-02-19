@@ -1,7 +1,7 @@
 export default function About() {
     return (
         <div className="flex min-h-screen min-w-screen">
-            <div className="p-8 flex flex-row items-end">
+            <div className="p-16 md:p-8 flex flex-row items-end">
                 <h1 className="text-4xl lg:text-8xl font-serif italic">About</h1>
             </div>
             <div className="flex justify-center flex-col gap-8">
